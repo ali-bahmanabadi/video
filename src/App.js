@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Provider from './context/Provider'
+import Home from './page/Home'
+import Single from './page/Single'
 
 function App() {
+  useEffect(() => {})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Provider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:id/:title" element={<Single />} />
+        </Routes>
+      </Provider>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

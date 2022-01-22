@@ -1,0 +1,19 @@
+.container-fluid {
+  .video-title {
+    font-size: 30px;
+    color: #fff;
+    padding: 40px 20px 10px;
+  }
+
+  .card {
+    background-color: #121212;
+  }
+
+  .video-poster {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+}
